@@ -28,7 +28,7 @@ Without any children addresses and a transaction history set to 10, we end up wi
 
 If we increase children depth to 2, the number explodes to 4968 unique BTC addresses with 7695 connections.
 
-Let's look at a more "typical" example. We'll use the BTC donate address associated with [Christopher Gurnee's btcrecover program](https://github.com/gurnec/btcrecover). This is a lot more coherent without 3D modeling.
+Let's look at a more "typical" example. We'll use the BTC donate address associated with [Christopher Gurnee's btcrecover program](https://github.com/gurnec/btcrecover). This is a lot more coherent even without implementing 3D modeling.
 
 At the software level, this script utilizes ruby's thread library. Everytime a child node is found and is within the specified parsing depth, a new "thread" is issued to traverse down and explore associated addresses and connections. For this reason, the script may take sometime to fully complete, and write to a json file.   
 
