@@ -1,7 +1,5 @@
 
 ##Brief Analysis
-This project provided me the first opportunity to write something in Ruby. It took a couple of days to learn the language, but it feels a bit leaner and cleaner than Python.
-
 The core of this program is a parsing script (rubychain.rb) that takes a single BTC address input. From this "node", we query "n" of recent transactions, which contain a list of input/output BTC addresses. These addresses are parsed to preserve "node links." From each of these addresses, we go to "n" depth and repeat the processes, exploring children connections.
 
 Due to taint (the mixing of BTC from multiple addresses to a single/few addresses), it's possible to create an map with thousands of BTC addresses and links, with only a shallow depth and dozen transaction records per address.
