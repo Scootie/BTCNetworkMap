@@ -136,8 +136,6 @@ if (startlinks.assoc("NewCoins"))!=nil
 	json_nodes[1]={"id"=> "n1", "label" => "NewCoins","x"=>20, "y"=>20, "size"=> 20}
 end
 
-#PP.pp(json_nodes)
-
 startwallet.each_with_index do |wallet,i|
 	j=i+coinoffset
 	x_cord= Random.new.rand(1..100)
