@@ -2,14 +2,14 @@ BTCWalletMap
 ============
 This is a proof of concept program that serves to demonstate the pseudo-anonymous nature of crypto-currency using BTC addresses.
 
-##Preface
+##Abstract
 Much has been made about the anonymous nature of bitcoins. However, this is a misconception. Under most circumstances, it's very possible to track down the sender/receiver of BTC. At some point, all BTC holders must have converted from fiat currency. This holds true for miners who cash out and or those who seek to invest in BTC.
 
 The majority of the time, this conversion occurs via formal exchanges like [Coinbase](http://coinbase.com), [Circle](http://www.circle.com), etc... As these entities, interact with real-life bank accounts, they posses transaction records that provides evidence of current balances. Thus, tracking an individual, is simply a matter of mapping out the BTC address that's sending and receiving to this these exchanges.
 
 Even for an individual with multiple wallets addresses, it's still possible to do deep financial analysis with a high degree of confidence. As "specific" BTC blocks are transmitted as part of a BTC transaction, correlation analysis between send/receive addresses and the specific blocks narrows down individual transactions. 
 
-Even if BTC transactions occur locally (i.e. [localbitcoins.com](http://localbitcoins.com)), the nature of the local transaction makes it possible to check real-life cameras (from stores, traffic, etc...) to find specific person.
+Even if BTC transactions occur locally (i.e. [localbitcoins.com](http://localbitcoins.com)), the nature of the local transaction makes it possible for government entities to check real-life cameras (from stores, traffic, etc...) to find a specific person.
 
 ##About the Code
 This project provided me the first opportunity to write something in Ruby. It took a couple of days to learn the language, but it feels a bit leaner and cleaner than Python.
@@ -18,7 +18,13 @@ The core of this program is a parsing script (rubychain.rb) that takes a single 
 
 Due to taint (the mixing of BTC from multiple addresses to a single/few addresses), it's possible to create an map with thousands of BTC addresses and links, with only a shallow depth and dozen transaction records per address.
 
-The following address [1Lym9twRJ4xjbHSt5zBGx7Tkb3EFEXn17y](https://blockchain.info/taint/1Lym9twRJ4xjbHSt5zBGx7Tkb3EFEXn17y) provides a good example. This is a random address I pulled off blockchain.info. Each transaction has no more than 50% taint. Without any children addresses and a transaction history set to 10, we end up with 298 unique BTC addresses with 352 connections between them. 
+The following address [1Lym9twRJ4xjbHSt5zBGx7Tkb3EFEXn17y](https://blockchain.info/taint/1Lym9twRJ4xjbHSt5zBGx7Tkb3EFEXn17y) provides a good example. This is a random address I pulled off blockchain.info. Each transaction has no more than 50% taint. 
+
+![No Children](https://github.com/Scootie/BTCWalletMap/blob/master/examples/taint_nochildren.png)
+
+Without any children addresses and a transaction history set to 10, we end up with 298 unique BTC addresses with 352 connections between them. 
+
+![Two Children](https://github.com/Scootie/BTCWalletMap/blob/master/examples/taint_2children.png)
 
 If we increase children depth to 2, the number explodes to 4968 unique BTC addresses with 7695 connections.
 
