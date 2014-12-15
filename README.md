@@ -40,6 +40,7 @@ For optimization reasons, I wanted to minimize the number of actual API queries.
 * [SigmaJS](http://sigmajs.org)
 * Ruby 1.9 or higher
 * Chain.com's Ruby lib
+  * Chain.com API key (free, you just need to register)
   
 ## Installation instructions
 
