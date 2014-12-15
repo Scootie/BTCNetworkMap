@@ -26,3 +26,17 @@ This script at the software level utilizes ruby's thread library. Everytime a ch
 [Blockchain.info](http://www.blockchain.info) and [Chain.com](http://chain.com) both provide excellent APIs for several programming langauges that allow you to connect to the BTC network and parse information about addresses, wallets, transactions, etc... I originally wrote much of the code to function with Blockchain's Ruby API. The company frankly provides better striaghtforward coherent documentation, but I ran into an issue where their API engine only allows you to retrieve than last 50 transactions for any given address. This can be overcome by switching to the http get requests to filter on JSON data, but you have to use page offsets to get the "next 50" transactions. 
 
 For optimization reasons, I wanted to minimize the number of actual API queries. This is where Chain.com comes out ahead, as their API allows you to specify a maximum of 500 transactions per query.
+
+## Requirements
+  
+* [SigmaJS](http://sigmajs.org)
+* Ruby 1.9 or higher
+* Chain.com's Ruby lib
+  
+## Installation instructions
+
+Will be added soon.
+
+## License
+
+Copyright Caleb Ku 2014. Distributed under the MIT License. (See accompanying file LICENSE or copy at http://opensource.org/licenses/MIT)
