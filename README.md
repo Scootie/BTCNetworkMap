@@ -21,7 +21,7 @@ myaddress="theaddress"
 numberoftxs=20
 depth=2
 json_filename="output.json"
-```Ruby
+```
 
 ## Requirements
   
