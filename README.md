@@ -1,6 +1,6 @@
 BTCWalletMap
 ============
-This is a proof of concept program that serves to demonstate the pseudo-anonymous nature of crypto-currency using BTC addresses.
+This is a proof of concept program that serves to demonstate the pseudo-anonymous nature of crypto-currency using BTC addresses in a node link map/diagram.
 
 ##Abstract
 Much has been made about the anonymous nature of bitcoins. However, this is a misconception. Under most circumstances, it's very possible to track down the sender/receiver of BTC. At some point, all BTC holders must have converted from fiat currency. This holds true for miners who cash out and or those who seek to invest in BTC.
