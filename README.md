@@ -11,7 +11,7 @@ Even for an individual with multiple wallets addresses, it's still possible to d
 
 Even if BTC transactions occur locally (i.e. [localbitcoins.com](http://localbitcoins.com)), the nature of the local transaction makes it possible for government entities to check real-life cameras (from stores, traffic, etc...) to find a specific person.
 
-##About the Code
+##Brief Analysis Preface
 This project provided me the first opportunity to write something in Ruby. It took a couple of days to learn the language, but it feels a bit leaner and cleaner than Python.
 
 The core of this program is a parsing script (rubychain.rb) that takes a single BTC address input. From this "node", we query "n" of recent transactions, which contain a list of input/output BTC addresses. These addresses are parsed to preserve "node links." From each of these addresses, we go to "n" depth and repeat the processes, exploring children connections.
@@ -28,14 +28,17 @@ Without any children addresses and a transaction history set to 10, we end up wi
 
 If we increase children depth to 2, the number explodes to 4968 unique BTC addresses with 7695 connections.
 
-Let's look at a more "typical" example. We'll use the BTC donate address associated with [Christopher Gurnee's btcrecover program](https://github.com/gurnec/btcrecover). This is a lot more coherent even without implementing 3D modeling.
+![BTCRecover](https://github.com/Scootie/BTCWalletMap/blob/master/examples/btcchris.png)
 
-At the software level, this script utilizes ruby's thread library. Everytime a child node is found and is within the specified parsing depth, a new "thread" is issued to traverse down and explore associated addresses and connections. For this reason, the script may take sometime to fully complete, and write to a json file.   
+Let's look at a more "typical" example. We'll use the BTC donate address associated with [Christopher Gurnee's btcrecover program](https://github.com/gurnec/btcrecover). This is a lot more coherent even without implementing 3D modeling. Doing confidence and correlation statistics could take up several pages of dicussion, but as a brief recap. Even though we query 20 transactions and a depth of 2, we find that there are actually very few donations made to this address. However, the few donations that are actually made occur from "NewCoins", which makes some sense as BTCrecover is a tool meant to help recover wallets when their owners have forgotten the password. This data tells us that most of those donating are miners. Additionally, we see a high correlation address associated with the donation address (upper left-hand corner), which makes it likely that it's an alternative address in the same wallet(lower right-hand corner).
+
 
 ##Information Sources
 [Blockchain.info](http://www.blockchain.info) and [Chain.com](http://chain.com) both provide excellent APIs for several programming langauges that allow you to connect to the BTC network and parse information about addresses, wallets, transactions, etc... I originally wrote much of the code to function with Blockchain's Ruby API. The company frankly provides better striaghtforward coherent documentation, but I ran into an issue where their API engine only allows you to retrieve than last 50 transactions for any given address. This can be overcome by switching to the http get requests to filter on JSON data, but you have to use page offsets to get the "next 50" transactions. 
 
 For optimization reasons, I wanted to minimize the number of actual API queries. This is where Chain.com comes out ahead, as their API allows you to specify a maximum of 500 transactions per query.
+
+At the software level, this script utilizes ruby's thread library. Everytime a child node is found and is within the specified parsing depth, a new "thread" is issued to traverse down and explore associated addresses and connections. For this reason, the script may take sometime to fully complete, and write to a json file.   
 
 ## Requirements
   
