@@ -18,7 +18,9 @@ The core of this program is a parsing script (rubychain.rb) that takes a single 
 
 Due to taint (the mixing of BTC from multiple addresses to a single/few addresses), it's possible to create an map with thousands of BTC addresses and links, with only a shallow depth and dozen transaction records per address.
 
-The following address [1Lym9twRJ4xjbHSt5zBGx7Tkb3EFEXn17y](https://blockchain.info/taint/1Lym9twRJ4xjbHSt5zBGx7Tkb3EFEXn17y) provides a good example. This is a random address I pulled off blockchain.info. Each transaction has no more than 50% taint. Without any children addresses and a transaction history set to 10, we end up with 298 unique BTC addresses with 352 connections between them. If we increase children depth to 2, the number explodes to 4968 unique BTC addresses with 7695 connections.
+The following address [1Lym9twRJ4xjbHSt5zBGx7Tkb3EFEXn17y](https://blockchain.info/taint/1Lym9twRJ4xjbHSt5zBGx7Tkb3EFEXn17y) provides a good example. This is a random address I pulled off blockchain.info. Each transaction has no more than 50% taint. Without any children addresses and a transaction history set to 10, we end up with 298 unique BTC addresses with 352 connections between them. 
+
+If we increase children depth to 2, the number explodes to 4968 unique BTC addresses with 7695 connections.
 
 This script at the software level utilizes ruby's thread library. Everytime a child node is found and is within the specified parsing depth, a new "thread" is issued to traverse down and explore associated addresses and connections. For this reason, the script may take sometime to fully complete, and write to a json file.   
 
