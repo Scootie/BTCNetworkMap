@@ -4,7 +4,7 @@ This project provided me the first opportunity to write something in Ruby. It to
 
 This is a proof of concept program that serves to demonstate the pseudo-anonymous nature of crypto-currency using BTC addresses in a node link map/diagram. 
 
-
+![nodemap](https://github.com/Scootie/BTCNetworkMap/blob/master/examples/gephi-2997-3097.png)
 
 For more information about using this as analysis tool please read [BriefAnalysis.md](/BriefAnalysis.md).
 
