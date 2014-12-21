@@ -13,7 +13,7 @@ Other BTC Addresses: Green
 
 ![1Deep-5TX](/examples/gephi-207-206.png)
 
-Set to a depth of 1 and 5 transactions, we end up with 207 unique BTC addresses with 206 connections between them.
+Set to a depth of 1 and 5 transactions, we end up with 207 unique BTC addresses with 206 connections between them. (Unconnected green hub is due to limitations in API calls, which default to 50 addresses per transaction. Read [changelog](/changelog.md) for more information about "verbose" parsing.) 
 
 ![1Deep-10TX](/examples/gephi-2997-3097.png)
 
