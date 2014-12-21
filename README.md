@@ -39,7 +39,7 @@ type="json" #gexf or json
 * Ruby 1.9 or higher
 * Chain.com's Ruby lib
   * Chain.com API key (free, you just need to register)
-* Other Required Gems: Hashie, Nokogiri
+* Other Required Gems: [Hashie](https://github.com/intridea/hashie), Nokogiri
   
 ## Installation instructions
 
