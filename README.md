@@ -6,7 +6,7 @@ This is a proof of concept program that serves to demonstate the pseudo-anonymou
 
 
 
-For more information about using this as analysis tool please read [BriefAnalysis.md](../BriefAnalysis.md).
+For more information about using this as analysis tool please read [BriefAnalysis.md](/BriefAnalysis.md).
 
 ##Abstract
 Much has been made about the anonymous nature of bitcoins. However, this is a misconception. Under most circumstances, it's very possible to track down the sender/receiver of BTC. At some point, all BTC holders must have converted from fiat currency. This holds true for miners who cash out and or those who seek to invest in BTC.
@@ -18,7 +18,7 @@ Even for an individual with multiple wallets addresses, it's still possible to d
 Even if BTC transactions occur locally (i.e. [localbitcoins.com](http://localbitcoins.com), the nature of the local transaction makes it possible for government entities to check real-life cameras (from stores, traffic, etc...) to find a specific person.
 
 ##Changelog
-See  [Changelog](../changelog.md)
+See  [Changelog](/changelog.md)
 
 ##Settings
 
