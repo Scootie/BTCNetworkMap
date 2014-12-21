@@ -1,4 +1,4 @@
-BTCWalletMap
+BTCWalletMap v0.1 JSON, merged code into master branch
 ============
 This project provided me the first opportunity to write something in Ruby. It took a couple of days to learn the language, but it feels a bit leaner and cleaner than Python.
 
