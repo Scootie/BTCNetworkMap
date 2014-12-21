@@ -4,12 +4,12 @@ The core of this program is a parsing script (rubychain.rb) that takes a single 
 
 Due to taint (the mixing of BTC from multiple addresses to a single/few addresses), it's possible to create an map with thousands of BTC addresses and links, with only a shallow depth and dozen transaction records per address. We'll use the BTC donate address associated with [Christopher Gurnee's btcrecover program](https://github.com/gurnec/btcrecover). 
 
-'''Ruby
+```Ruby
 Legend
 Query BTC Address: Red
 NewCoins: Blue
 Other BTC Addresses: Green
-'''
+```
 
 ![1Deep-5TX](/examples/gephi-207-206.png)
 
