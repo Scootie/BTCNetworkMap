@@ -4,9 +4,9 @@ This project provided me the first opportunity to write something in Ruby. It to
 
 This is a proof of concept program that serves to demonstate the pseudo-anonymous nature of crypto-currency using BTC addresses in a node link map/diagram. 
 
-![BTCRecover](https://github.com/Scootie/BTCNetworkMap/blob/master/examples/btcchris.png)
+![BTCRecover](/examples/btcchris.png)
 
-For more information about using this as analysis tool please read [BriefAnalysis.md](https://github.com/Scootie/BTCNetworkMap/blob/master/BriefAnalysis.md).
+For more information about using this as analysis tool please read [BriefAnalysis.md](/BriefAnalysis.md).
 
 ##Abstract
 Much has been made about the anonymous nature of bitcoins. However, this is a misconception. Under most circumstances, it's very possible to track down the sender/receiver of BTC. At some point, all BTC holders must have converted from fiat currency. This holds true for miners who cash out and or those who seek to invest in BTC.
